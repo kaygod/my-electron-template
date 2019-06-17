@@ -3,8 +3,11 @@ import thunk from 'redux-thunk';
 import { createHashHistory } from 'history';
 import { routerMiddleware, routerActions } from 'connected-react-router';
 import { createLogger } from 'redux-logger';
-import createRootReducer from '../reducers';
-import * as counterActions from '../actions/counter';
+import createRootReducer from '../redux';
+import * as homeActions from '../redux/modules/homepage/action';
+import * as detailActions from '../redux/modules/detailpage/action';
+import api from "../redux/middleware/api";
+
 
 
 const history = createHashHistory();
@@ -18,6 +21,8 @@ const configureStore = () => {
 
   // Thunk Middleware
   middleware.push(thunk);
+
+  middleware.push(api);
 
   // Logging Middleware
   const logger = createLogger({
@@ -36,7 +41,8 @@ const configureStore = () => {
 
   // Redux DevTools Configuration
   const actionCreators = {
-    ...counterActions,
+    ...homeActions,
+    ...detailActions,
     ...routerActions
   };
   // If Redux DevTools Extension is installed use it, otherwise use Redux compose
@@ -58,9 +64,9 @@ const configureStore = () => {
 
   if (module.hot) {
     module.hot.accept(
-      '../reducers',
+      '../redux',
       // eslint-disable-next-line global-require
-      () => store.replaceReducer(require('../reducers').default)
+      () => store.replaceReducer(require('../redux').default)
     );
   }
 

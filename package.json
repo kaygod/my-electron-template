@@ -26,11 +26,11 @@
   "build": {
     "productName": "维云云设备",
     "appId": "org.develar.ElectronReact",
-    "nsis":{
-      "oneClick":false,
-      "allowToChangeInstallationDirectory":true,
-      "createDesktopShortcut":true,
-      "runAfterFinish":true
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "runAfterFinish": true
     },
     "files": [
       "app/dist/",
@@ -140,6 +140,7 @@
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.0",
+    "axios": "^0.19.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.5.0",
