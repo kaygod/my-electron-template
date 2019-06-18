@@ -8,6 +8,7 @@ import { bindActionCreators } from 'redux';
 import { actions as homeAction,getLikes,getRecommends,getLoading} from "../../redux/modules/homepage/action";
 import "./style.scss";
 
+
 class Homepage extends Component {
   
   jump=()=>{

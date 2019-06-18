@@ -30,7 +30,7 @@ export const actions={
     return (dispatch,getState)=>{
        
       let params={
-          url:"/data/detail.json",
+          url:"./constants/detail.json",
           types:[types["DETAIL/REQUESTTING"],types["DETAIL/REQUEST_SUCCESS"],types["DETAIL/REQUEST_FAIL"]]
       }
       

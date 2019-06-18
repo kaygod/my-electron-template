@@ -24,7 +24,7 @@
   },
   "main": "./app/main.prod.js",
   "build": {
-    "productName": "维云云设备",
+    "productName": "维云云设备demo",
     "appId": "org.develar.ElectronReact",
     "nsis": {
       "oneClick": false,

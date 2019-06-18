@@ -31,16 +31,10 @@ export default class Header extends Component {
             <div className="header">
                 {
                     goBack?(<div className="back" onClick={this.goBack}>Back</div>):null
-                }
-                 {
-                    login?(<div className="back blue" onClick={this.login}>登录</div>):null
-                 }            
+                }                
                  <div className="content">
                    {title}
-                 </div>
-                 {
-                     goSearch?(<div className="search" onClick={this.goSearchPage}>搜索</div>):null
-                 }     
+                 </div>    
             </div>    
         );
     }

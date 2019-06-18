@@ -8,7 +8,7 @@ export default class ProductDetail extends Component{
         
         const { data,id } = this.props;
 
-        return (
+        return ( 
 
             <div className="productDetail">
                <p className="title">商品详情</p>

@@ -21,7 +21,6 @@ class Detailpage extends Component {
     }
 
     componentDidMount(){
-        console.log(this.props);
         this.props.detailAction.loadData();
     }
 

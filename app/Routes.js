@@ -7,7 +7,7 @@ import DetailPage from './containers/Detailpage';
 export default () => (
   <App>
     <Switch>
-      <Route path="/" component={HomePage} />
+      <Route exact path="/" component={HomePage} />
       <Route path="/detail/:id" component={DetailPage} />
     </Switch>
   </App>
