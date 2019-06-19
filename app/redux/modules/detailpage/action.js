@@ -1,4 +1,9 @@
-import { dataResolve } from "../../../utils/common";
+import { dataResolve,createFolder } from "../../../utils/common";
+
+let detail_url = createFolder({
+  name:"detail_url.json",
+  data:require("../../../constants/detail.json")
+ });
 
 export const initialState={
   isFetching:1,//0是访问失败 1是初始状态 2请求中 3请求成功
@@ -30,7 +35,7 @@ export const actions={
     return (dispatch,getState)=>{
        
       let params={
-          url:"./constants/detail.json",
+          url:detail_url,
           types:[types["DETAIL/REQUESTTING"],types["DETAIL/REQUEST_SUCCESS"],types["DETAIL/REQUEST_FAIL"]]
       }
       

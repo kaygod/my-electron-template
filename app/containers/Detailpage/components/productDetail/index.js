@@ -1,6 +1,8 @@
 import React,{Component} from "react";
 import "./style.scss";
 
+const img_url = require("../../../../imgs/3.jpg");
+
 export default class ProductDetail extends Component{
 
    
@@ -30,7 +32,7 @@ export default class ProductDetail extends Component{
                         <div className="prev">商品图片:</div>
                         <div className="after">
                            {
-                              data.img? <img src={data.img[0]} />:null 
+                              data.img? <img src={img_url} />:null 
                            }                       
                         </div>
                     </li>

@@ -1,4 +1,14 @@
-import { get,dataResolve } from "../../../utils/common";
+import { get,dataResolve,createFolder } from "../../../utils/common";
+
+let like_url = createFolder({
+ name:"like_url.json",
+ data:require("../../../constants/likes.json")
+});
+
+let recommends_url = createFolder({
+  name:"recommends_url.json",
+  data:require("../../../constants/recommends.json")
+});
 
 export const types={
     "HOMEPAGE/LIKES_REQUESTTING":"likes_requestting",
@@ -50,7 +60,7 @@ export const actions={
         }
 
         let params={
-            url:"./constants/likes.json",
+            url:like_url,
             types:[
                 types["HOMEPAGE/LIKES_REQUESTTING"],
                 types["HOMEPAGE/LIKES_REQUEST_SUCCESS"],
@@ -74,7 +84,7 @@ export const actions={
       }
 
         let params={
-            url:"./constants/recommends.json",
+            url:recommends_url,
             types:[
                 types["HOMEPAGE/RECOM_REQUESTTING"],
                 types["HOMEPAGE/RECOM_REQUEST_SUCCESS"],
